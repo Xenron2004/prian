@@ -243,7 +243,7 @@ const Navbar = () => {
               }}
               className="md:max-w-[216px] font-inter h-[45px] bg-[#006ff9] font-medium flex items-center justify-center text-white w-full py-4 px-6 rounded-3xl"
             >
-              Let's Talk!
+              CONTACT US
             </button>
 
             <button
