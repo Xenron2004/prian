@@ -46,13 +46,13 @@ export function Navbar({ transparent = false }) {
           <Link href="/" className="text-gray-600 hover:text-gray-900">
             Home
           </Link>
-          <Link href="/services" className="text-gray-600 hover:text-gray-900">
+          <Link href="#services" className="text-gray-600 hover:text-gray-900">
             Services
           </Link>
-          <Link href="/about" className="text-gray-600 hover:text-gray-900">
+          <Link href="#about" className="text-gray-600 hover:text-gray-900">
             About Us
           </Link>
-          <Link href="/clients" className="text-gray-600 hover:text-gray-900">
+          <Link href="#clients" className="text-gray-600 hover:text-gray-900">
             Clients
           </Link>
           <Link

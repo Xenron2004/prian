@@ -3,9 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href")?.substring(1);
+    const targetElement = targetId ? document.getElementById(targetId) : null;
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
 export function GrowthPartner() {
   return (
-    <section className="py-16 px-4 bg-white">
+    <section id="abouts" className="py-16 px-4 bg-white">
       <div className="container mx-auto max-w-7xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section - Original height maintained */}
@@ -13,7 +25,7 @@ export function GrowthPartner() {
             <Image
               src="/images/growthPartner.webp"
               alt="Team meeting"
-              width={600}  // Original width
+              width={600} // Original width
               height={400} // Original height
               className="rounded-2xl"
             />
@@ -22,31 +34,44 @@ export function GrowthPartner() {
           {/* Content Section */}
           <div className="flex flex-col">
             {/* Header */}
-            <div className="mb-8">
+            <div className="mb-2">
               <span className="text-[#FF5733] font-medium text-lg tracking-wide">
                 Who we are
               </span>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-8 leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
                 Your Growth Partner in Digital Era
               </h1>
             </div>
 
             {/* Paragraphs */}
-            <div className="space-y-6 mb-12">
+            <div className="space-y-6 mb-6">
               <p className="text-gray-700 text-lg leading-relaxed">
-                At Brian Digitech, we are more than just a digital marketing agency—we are your brand's growth partner. Our team of creative strategists, SEO specialists, and data-driven marketers craft customized campaigns to boost your online presence, brand engagement, and revenue.
+                At PRIAN DIGITECH, we don’t just create digital services — we
+                create digital experiences that spark growth, engagement, and
+                success. We are a passionate team of web and app developers,
+                creative designers, video editors, AutoCAD specialists, digital
+                marketers, and content creators — all working together with one
+                goal: to power your brand’s journey to the next level.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
-                With expertise in SEO, PPC, social media marketing, content marketing, and web design, we help businesses transform their digital footprint into a profit-generating powerhouse.
+                Whether you're a startup, small business, or an established
+                brand, we deliver custom-built websites, high-impact marketing
+                strategies, stunning graphics, professional videos, and
+                innovative digital solutions that align with your business
+                goals. With creativity at our core and technology in our
+                DNA,PRIAN DIGITECH ensures that every project we handle is
+                designed for impact and built for success — just like our
+                tagline promises.
               </p>
             </div>
 
             {/* Button */}
-            <Link 
-              href="/contact" 
+            <Link
+            onClick={handleClick}
+              href="#projects"
               className="bg-[#FF5733] text-white px-8 py-4 rounded-full hover:bg-[#FF5733]/90 transition-all duration-300 inline-block w-fit text-lg font-medium"
             >
-              CONTACT US
+              Explore Our Projects
             </Link>
           </div>
         </div>

@@ -28,11 +28,11 @@ export function TestimonialCard({ testimonial }: TestimonialCardProps) {
             />
           </div>
         </div>
-        <div className="relative w-20 h-8 p-1 bg-white rounded-lg border border-gray-500">
+        <div className="relative w-20 h-12 p-1 bg-white rounded-lg border border-gray-500">
           <img
             src={testimonial.companyLogo}
             alt="Company Logo"
-            className="object-contain w-full h-full p-1"
+            className="object-contain w-full h-full "
           />
         </div>
       </div>

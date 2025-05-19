@@ -4,10 +4,25 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaPhoneAlt } from "react-icons/fa"
 import Link from "next/link";
 import { IoMdMail } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import Logo from "../../public/images/DigiLogo.png"
+
+
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute("href")?.substring(1);
+    const targetElement = targetId ? document.getElementById(targetId) : null;
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
 const Footer = () => {
   return (
-    <footer className="flex items-start py-4 justify-center bg-dark">
+    <footer  className="flex items-start py-4 justify-center bg-dark">
       <div className="flex flex-wrap max-w-[1280px] items-start gap-8 w-11/12 py-8 justify-between">
         {/* Logo Section */}
         <div className="flex flex-col items-start justify-between">
@@ -27,22 +42,16 @@ const Footer = () => {
                   height: '50.16px'
                 }}
               >
-                <Image
-                  src="/images/PRIAN LOGO 6[1] 1.png"
-                  alt="Logo Part 1"
-                  fill
-                  className="object-contain"
-                />
               </div>
               <div 
                 className="relative"
                 style={{
-                  width: '98.98px',
-                  height: '30.70px'
+                  width: '150px',
+                  height: '50px'
                 }}
               >
                 <Image
-                  src="/images/logo.svg" 
+                  src={Logo}
                   alt="Logo Part 2"
                   fill
                   className="object-contain"
@@ -61,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3 text-start font-montserrat text-gray-600">
               <li>
                 <div className="flex gap-2 items-center justify-start">
-                  <IoMdMail size={16} className="text-[#E3AF45]" />
+                  <IoMdMail size={16} className="text-[#FF743F]" />
                   <div className="font-medium text-bodyText hover:text-headingText text-[15px]">
                     priandigitech@gmail.com
                   </div>
@@ -69,17 +78,17 @@ const Footer = () => {
               </li>
               <li>
                 <div className="flex gap-2 items-center justify-start">
-                  <FaPhoneAlt size={16} className="text-[#E3AF45]" />
+                  <FaPhoneAlt size={16} className="text-[#FF743F]" />
                   <div className="font-medium text-bodyText hover:text-headingText text-[15px]">
-                    +91 7762975577
+                    +91 62003 09399
                   </div>
                 </div>
               </li>
               <li>
                 <div className="flex gap-2 items-center justify-start">
-                  <FaLocationDot size={16} className="text-[#E3AF45]" />
+                  <FaLocationDot size={16} className="text-[#FF743F]" />
                   <div className="font-medium text-bodyText hover:text-headingText text-[15px]">
-                    202, Santa Enclave,SBI Bank Gola road, Danapur, Patna-801503
+                    301,Nalanda House , T- point Gola Road, Patna Bihar  801503
                   </div>
                 </div>
               </li>
@@ -103,7 +112,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/services"
+                  onClick={handleClick}
+                    href="#services"
                     className="hover:text-bodyText transition duration-300 ease-in-out text-start font-medium text-mainBodytext text-[15px]"
                   >
                     Services
@@ -111,7 +121,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/about"
+                  onClick={handleClick}
+                    href="#abouts"
                     className="hover:text-bodyText transition duration-300 ease-in-out text-start font-medium text-mainBodytext text-[15px]"
                   >
                     About Us
@@ -119,10 +130,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    href="/clients"
+                  onClick={handleClick}
+                    href="#projects"
                     className="hover:text-bodyText transition duration-300 ease-in-out text-start font-medium text-mainBodytext text-[15px]"
                   >
-                    Clients
+                    Projects
                   </Link>
                 </li>
               </ul>
@@ -189,7 +201,7 @@ const Footer = () => {
                 className="text-[#FF0000] hover:text-[#CC0000] duration-300 ease-in-out"
               />
             </Link>
-            <Link href="https://www.instagram.com/" className="hover:scale-110 transition-transform">
+            <Link href="https://www.instagram.com/priandigitech?igsh=MWl0NnpzOGQ3YXp1bA==" className="hover:scale-110 transition-transform">
               <FaInstagram
                 size={20}
                 className="text-[#E4405F] hover:text-[#D42D5C] duration-300 ease-in-out"

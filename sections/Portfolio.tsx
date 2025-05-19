@@ -2,7 +2,7 @@ import Projects from "@/components/Projects"
 
 export default function PortfolioPage() {
   return (
-    <main>
+    <main id="projects" >
       <Projects/>
     </main>
   );

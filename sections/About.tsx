@@ -10,7 +10,7 @@ const About = () => {
             Who we are
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Your Growth Partner in Digital Era
+             Your Trusted Partner for Digital Excellence and Innovation
           </h2>
         </div>
         

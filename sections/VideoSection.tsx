@@ -53,7 +53,7 @@ export function VideoSection() {
             className="w-full h-full object-cover transition-opacity duration-300"
             onClick={togglePlay}
           >
-            <source src="/video1.mp4" type="video/mp4" />
+            <source src="/NewTheme.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
